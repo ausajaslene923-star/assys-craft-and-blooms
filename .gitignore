@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+.DS_Store
+
+# Private setup and testing files
+backend/config/create-admin.php
+backend/api/test-connection.php

@@ -1,0 +1,367 @@
+
+/* ASSY'S CRAFT AND BLOOMS */
+
+:root {
+  --burgundy: #8A003F;
+  --dusty-rose: #B85A77;
+  --soft-pink: #E19797;
+  --peach-pink: #F8D9CD;
+  --white: #FFFFFF;
+  --dark-text: #333333;
+}
+
+/* Main Page */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+body {
+  background: var(--white);
+  color: var(--dark-text);
+}
+
+/* Header */
+.main-header {
+  width: 100%;
+  background: var(--burgundy);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 15px;
+}
+
+.main-header h1 {
+  color: var(--white);
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-header p {
+  color: var(--white);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Welcome Section */
+main {
+  max-width: 1100px;
+}
+
+main section:first-child h2 {
+  color: var(--burgundy);
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+main section:first-child p {
+  color: var(--dark-text);
+  font-size: 15px;
+}
+
+/* Account and Collection Cards */
+.card {
+  background: var(--white);
+  border: 1px solid var(--peach-pink);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(138, 0, 63, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card h3,
+.card h4 {
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--dark-text);
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn-danger {
+  background-color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: var(--dusty-rose);
+  border-color: var(--dusty-rose);
+  transform: scale(1.04);
+  box-shadow: 0 5px 12px rgba(138, 0, 63, 0.2);
+}
+
+/* Collection Placeholders */
+.collection-placeholder {
+  background: var(--peach-pink);
+  border-radius: 10px;
+  min-height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 65px;
+}
+
+/* Collection Heading */
+main section h2 {
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  background: var(--burgundy);
+  color: var(--white);
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .main-header h1 {
+    font-size: 23px;
+  }
+
+  main section:first-child h2 {
+    font-size: 27px;
+  }
+
+  .collection-placeholder {
+    min-height: 140px;
+  }
+}
+
+/* LOGIN AND SIGNUP HOVER ANIMATION */
+
+/* Account Cards */
+.account-section .card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.account-section .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--dusty-rose);
+  box-shadow: 0 12px 25px rgba(138, 0, 63, 0.18);
+}
+
+/* Account Card Heading */
+.account-section .card h3 {
+  transition: color 0.3s ease;
+}
+
+.account-section .card:hover h3 {
+  color: var(--dusty-rose);
+}
+
+/* Account Card Buttons */
+.account-section .btn {
+  transition: all 0.3s ease;
+}
+
+.account-section .card:hover .btn {
+  box-shadow: 0 5px 15px rgba(138, 0, 63, 0.2);
+}
+
+/* Keyboard Accessibility */
+.account-section .btn:focus-visible {
+  outline: 3px solid var(--soft-pink);
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .account-section .card,
+  .account-section .btn {
+    transition: none;
+  }
+}
+
+/* LOGIN PAGE */
+
+.auth-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.auth-card {
+  max-width: 450px;
+  background: var(--white);
+  padding: 35px;
+  border: 1px solid var(--peach-pink);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(138, 0, 63, 0.10);
+}
+
+.auth-card h2 {
+  color: var(--burgundy);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.auth-description {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.auth-card .form-label {
+  color: var(--burgundy);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.auth-card .form-control,
+.auth-card .form-select {
+  min-height: 45px;
+  border: 1px solid var(--peach-pink);
+  border-radius: 7px;
+}
+
+.auth-card .form-control:focus,
+.auth-card .form-select:focus {
+  border-color: var(--dusty-rose);
+  box-shadow: 0 0 0 3px rgba(184, 90, 119, 0.15);
+}
+
+.auth-card a {
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+.auth-card a:hover {
+  color: var(--dusty-rose);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 25px 20px;
+  }
+}
+
+
+/* Password Show/Hide Button */
+.auth-card .input-group {
+  position: relative;
+}
+
+.auth-card .input-group .form-control {
+  border-radius: 7px !important;
+  padding-right: 65px;
+}
+
+.auth-card .input-group .btn-outline-secondary {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  border: none !important;
+  background: transparent !important;
+  color: var(--burgundy) !important;
+  box-shadow: none !important;
+  padding: 5px 8px;
+  font-size: 13px;
+}
+
+.auth-card .input-group .btn-outline-secondary:hover {
+  color: var(--dusty-rose) !important;
+  background: transparent !important;
+}
+
+
+.auth-card .input-group .btn-outline-secondary:hover {
+  color: var(--dusty-rose) !important;
+  background: transparent !important;
+}
+
+/* Make Autofilled Inputs Match Empty Inputs */
+
+.auth-card input.form-control:-webkit-autofill,
+.auth-card input.form-control:-webkit-autofill:hover,
+.auth-card input.form-control:-webkit-autofill:focus,
+.auth-card input.form-control:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #333333 !important;
+  caret-color: #333333;
+  border: 1px solid var(--peach-pink) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Normal input background */
+.auth-card .form-control {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured-products {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.featured-products h2 {
+  color: #8A003F;
+  font-weight: 700;
+}
+
+.featured-products > p {
+  color: #666666;
+}
+
+.featured-product-card {
+  border: 1px solid #F2D6E0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  background: #FFFFFF;
+}
+
+.featured-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(138, 0, 63, 0.12);
+}
+
+.featured-product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: #FFF8F8;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.featured-product-card h4 {
+  color: #8A003F;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.featured-product-card p {
+  color: #666666;
+  font-size: 14px;
+}

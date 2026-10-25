@@ -1,0 +1,254 @@
+
+/* =================================
+   CONTACT PAGE
+================================= */
+
+.contact-page {
+  min-height: 100vh;
+  background: #fffafa;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.contact-header {
+  background: #8A003F;
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+}
+
+.contact-header h1 {
+  color: white;
+  font-size: 27px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.contact-header p {
+  color: white;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+/* MAIN CONTAINER */
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+/* INTRODUCTION */
+
+.contact-intro {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contact-intro h2 {
+  color: #8A003F;
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.contact-intro p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* CONTENT LAYOUT */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-information,
+.contact-form-card {
+  background: white;
+  border: 1px solid #F8D9CD;
+  border-radius: 13px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(138, 0, 63, 0.06);
+}
+
+.contact-information h3,
+.contact-form-card h3 {
+  color: #8A003F;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.contact-information p {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.contact-information strong {
+  color: #8A003F;
+}
+
+/* FORM */
+
+.contact-form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form-group label {
+  display: block;
+  color: #8A003F;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  border: 1px solid #F8D9CD;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: #B85A77;
+  box-shadow: 0 0 0 3px rgba(184, 90, 119, 0.12);
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* SEND BUTTON */
+
+.contact-form-card form button {
+  width: 100%;
+  background: #8A003F;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form-card form button:hover {
+  background: #B85A77;
+  transform: translateY(-2px);
+}
+
+/* BACK BUTTON */
+
+.contact-navigation {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-start;
+  background: #fffafa;
+}
+
+.contact-back-button {
+  background: #8A003F;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-back-button:hover {
+  background: #B85A77;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.contact-footer {
+  background: #8A003F;
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+  margin-top: 30px;
+}
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    padding: 35px 18px;
+  }
+
+  .contact-intro h2 {
+    font-size: 29px;
+  }
+
+  .contact-header h1 {
+    font-size: 23px;
+  }
+
+  .contact-information,
+  .contact-form-card {
+    padding: 22px;
+  }
+}
+
+/* SUCCESS MESSAGE */
+
+.contact-success {
+  background: #e8f7ec;
+  color: #217a3c;
+  border: 1px solid #a8dfb5;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ERROR MESSAGE */
+
+.contact-error {
+  background: #fff0f0;
+  color: #b42318;
+  border: 1px solid #f2b8b5;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* DISABLED SEND BUTTON */
+
+.contact-form-card form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
